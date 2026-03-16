@@ -1,0 +1,49 @@
+- trim() //remove all whitespace
+- trimStart() //remove from start
+- trimEnd() //same but end
+- padStart(how many-1, value) //pads start with value
+- padEnd() //same but end
+- charAt() //
+- charCodeAt() //unicode value
+- split() //split into substrings as an array of strings
+- length //length
+- substr() //same but deprecated
+- replace()
+- replaceAll()
+- toUpperCase() // obv
+- toLowerCase() //obv
+- concat()
+- indexOf()
+- lastIndexOf()
+- search()
+- match()
+- matchAll()
+- includes()
+- startsWith()
+- endsWith()
+- text1.repeat(how many)
+- charCodeAt
+- name.at
+- text3 = text1.concat("", text2) /*same as*/ "+"
+- text1.slice(10, 20) // start, end *negatives work
+- text.substring(7, 10) // where to start and until when *ngatives work 
+- text.trim() // remove whire spaces
+- 
+
+- length
+- toString()
+- pop() //
+- push()
+- shift()
+- unshift()
+- join()
+- delete
+- concat()
+- flat()
+- splice()
+- slice()
+- indexOf()
+- includes()
+- find()
+- sort()
+- reverse()

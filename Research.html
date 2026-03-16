@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The <b>this</b> Keyword</h1>
+<p>The <b>this</b> keyword makes it possible to use the same method with different objects.</p>
+
+<p id="demo"></p>
+
+<script>
+
+let first = "hello";
+let second = "world";
+let x1 = "javascript";
+let x2 = "programming"
+let x3 = "coding is fun"
+let x4 = "cat"
+let x5 = "apple, banana, orange"
+let x6 = ["hello", "world"]
+let x7 = "Hello world"
+let x8 = 1
+let x9 = 2
+console.log(first.concat(second));
+console.log(x1.length)
+console.log(x2.charAt(0))
+console.log(x3.slice(0, 6))
+console.log(x4.replace("a", "e"))
+console.log(x4.toUpperCase())
+console.log(x5.split(","))
+console.log(x6.join(","))
+console.log(x5.trim())
+console.log(x5.includes("world"))
+
+console.log(first.split("").reverse().join(""))
+// 12 console.log(s.split("").) //count
+
+function isPalindrome(str) {
+  str = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+    if (str[i] !== str[j]) return false;
+  }
+  return true;
+}
+
+// Example
+console.log(isPalindrome("racecar")); // true
+
+function capitalize(str) {
+  let words = str.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+  }
+  return words.join(" ");
+}
+
+// Example
+console.log(capitalize("hello world")); // "Hello World"
+
+//console.log(indexat)
+
+let number = 1.3332
+console.log(number.toFixed(2))
+let strnum = "Hello 12m 1lll"
+console.log(parseInt(strnum, 5))
+let email = "Mohammad@gmai.com"
+console.log(email.endsWith("@gmail.com"))
+let torepl = "bad is not good, it is bad"
+console.log(torepl.replaceAll("bad", "good"))
+function removeDuplicates(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    if (!result.includes(str[i])) result += str[i];
+  }
+  return result;
+}
+
+// Example
+console.log(removeDuplicates("hello")); // "helo"
+
+let dup = "hello"
+//console.log(dup.split("").)
+
+let sorted = "hellsso"
+console.log(sorted.split("").sort().join(""))
+
+let word1='ananab'
+let word2 = 'banana'
+console.log((word1.split("").reverse().join(''))===word2)
+
+let sentence = "hello how are you"
+console.log(sentence.split(" ").reverse().join(" "))
+
+let longest = "test which is teh longest"
+console.log(longest.split(" "))
+
+let palsent = "A man, a plan, a canal, Panama!"
+console.log(palsent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '') == palsent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '').split(" ").reverse().join(""))
+
+let tocount = "missisipi"
+console.log(tocount.split('') )//count letters)
+
+let repword = "h3ll4"
+console.log(repword.replaceAll(1, 'a'),(2, 'e'),(3, 'o'),(4, 'i'),(5, 'u'))
+
+
+</script>
+</body>
+</html>
