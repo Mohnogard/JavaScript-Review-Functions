@@ -8,31 +8,46 @@
 
 <script>
 
-let first = "hello";
-let second = "world";
-let x1 = "javascript";
-let x2 = "programming"
-let x3 = "coding is fun"
-let x4 = "cat"
-let x5 = "apple, banana, orange"
-let x6 = ["hello", "world"]
-let x7 = "Hello world"
-let x8 = 1
-let x9 = 2
-console.log(first.concat(second));
-console.log(x1.length)
-console.log(x2.charAt(0))
-console.log(x3.slice(0, 6))
-console.log(x4.replace("a", "e"))
-console.log(x4.toUpperCase())
-console.log(x5.split(","))
-console.log(x6.join(","))
-console.log(x5.trim())
-console.log(x5.includes("world"))
+let word1a="Hello "
+let word1b="World"
+console.log(word1a.concat(word1b));
 
-console.log(first.split("").reverse().join(""))
-// 12 console.log(s.split("").) //count
+let word2='JavaScript'
+console.log(word2.length)
 
+let word3='Programming'
+console.log(word3.charAt(0))
+
+let word4='coding is fun'
+console.log(word4.slice(0, 6))
+
+let word5='cat'
+console.log(word5.replace("a", "e"))
+
+let word6='javascript'
+console.log(word6.toUpperCase())
+
+let word7='apple, banana, orange'
+console.log(word7.split(","))
+
+let word8=['hello', 'world']
+console.log(word8.join(" "))
+
+let word9="  hello world  "
+console.log(word9.trim())
+
+let word10 = 'hello world'
+console.log(word10.includes("world"))
+
+let word11 = 'hello'
+console.log(word11.split("").reverse().join(""))
+
+
+let word12 = "helloo" 
+console.log(word12.split("").reduce((a,c)=>(a[c]=(a[c]||0)+1,a),{}));
+
+
+let word13 = 'racecar'
 function isPalindrome(str) {
   str = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   for (let i = 0, j = str.length - 1; i < j; i++, j--) {
@@ -40,10 +55,10 @@ function isPalindrome(str) {
   }
   return true;
 }
+console.log(isPalindrome(word13)); 
 
-// Example
-console.log(isPalindrome("racecar")); // true
 
+let word14 = 'hello world'
 function capitalize(str) {
   let words = str.split(" ");
   for (let i = 0; i < words.length; i++) {
@@ -51,20 +66,25 @@ function capitalize(str) {
   }
   return words.join(" ");
 }
+console.log(capitalize(word14));
 
-// Example
-console.log(capitalize("hello world")); // "Hello World"
 
-//console.log(indexat)
+let word15 = 1.3332
+console.log(word15.toFixed(2))
 
-let number = 1.3332
-console.log(number.toFixed(2))
-let strnum = "Hello 12m 1lll"
-console.log(parseInt(strnum, 5))
-let email = "Mohammad@gmai.com"
-console.log(email.endsWith("@gmail.com"))
-let torepl = "bad is not good, it is bad"
-console.log(torepl.replaceAll("bad", "good"))
+
+let word16 = "Hello 12m 1lll"
+console.log(word16.match(/\d+/g).map(Number))//
+
+
+let word17 = "Mohammad@gmai.com"
+console.log(word17.endsWith("@gmail.com"))
+
+let word18 = "bad is not good, it is bad"
+console.log(word18.replaceAll("bad", "good"))
+
+
+let word19 = "aaabc"
 function removeDuplicates(str) {
   let result = "";
   for (let i = 0; i < str.length; i++) {
@@ -72,34 +92,51 @@ function removeDuplicates(str) {
   }
   return result;
 }
+console.log(removeDuplicates(word19)); 
 
-// Example
-console.log(removeDuplicates("hello")); // "helo"
+let word20 = "hellsso"
+console.log(word20.split("").sort().join(""))
 
-let dup = "hello"
-//console.log(dup.split("").)
+let word21a='ananab'
+let word21b = 'banana'
+console.log((word21a.split("").reverse().join(''))===word21b)
 
-let sorted = "hellsso"
-console.log(sorted.split("").sort().join(""))
+let word22 = "the quick brown fox"
+console.log(word22.split(" ").reverse().join(" "))
 
-let word1='ananab'
-let word2 = 'banana'
-console.log((word1.split("").reverse().join(''))===word2)
+let word23 = "test which is teh longest"
+console.log(word23.split(" ").reduce((a,b)=>b.length>a.length?b:a))
 
-let sentence = "hello how are you"
-console.log(sentence.split(" ").reverse().join(" "))
-
-let longest = "test which is teh longest"
-console.log(longest.split(" "))
-
-let palsent = "A man, a plan, a canal, Panama!"
-console.log(palsent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '') == palsent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '').split(" ").reverse().join(""))
+let word24 = "A man, a plan, a canal, Panama!"
+console.log(word24.toLowerCase().replace(/[^a-zA-Z0-9]/g, '') === word24.toLowerCase().replace(/[^a-zA-Z0-9]/g, '').split(" ").reverse().join(""))
 
 let tocount = "missisipi"
-console.log(tocount.split('') )//count letters)
+console.log(tocount.split("").reduce((o,c)=>(o[c]=(o[c]||0)+1,o),{}))
 
-let repword = "h3ll4"
-console.log(repword.replaceAll(1, 'a'),(2, 'e'),(3, 'o'),(4, 'i'),(5, 'u'))
+word26="hello"   
+    let result = word26.replace(/[aeiou]/g, (v) => {
+        switch(v){
+            case 'a': return '1';
+            case 'e': return '2';
+            case 'i': return '3';
+            case 'o': return '4';
+            case 'u': return '5';
+        }
+    });
+    console.log(result)
+
+    word27="Javascript is fun"
+    console.log(word27.startsWith("Javascript"))
+
+    word28="images.png"
+    console.log(word28.endsWith(".png"))
+
+    word29 = "ha"
+    console.log(word29.repeat(5))
+
+
+let word30 = "hello world"
+console.log(word30.split("").indexOf("o"))
 
 
 </script>
